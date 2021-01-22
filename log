@@ -1,0 +1,955 @@
+I0522 12:51:19.564959 140661652617024 file_utils.py:33] TensorFlow version 2.0.0 available.
+I0522 12:51:19.565100 140661652617024 file_utils.py:40] PyTorch version 1.2.0 available.
+I0522 12:51:22.440375 140661652617024 modeling.py:230] Better speed can be achieved with apex installed from https://www.github.com/nvidia/apex .
+
+0it [00:00, ?it/s]
+568it [00:00, 4245.28it/s]
+
+0it [00:00, ?it/s]
+2020-05-22 12:51:25,028 - INFO - allennlp.data.vocabulary - Fitting token dictionary from dataset.
+143it [00:00, 5270.57it/s]
+
+  0%|          | 0/711 [00:00<?, ?it/s]
+2020-05-22 12:51:25,059 - INFO - allennlp.common.params - num_embeddings = None
+2020-05-22 12:51:25,059 - INFO - allennlp.common.params - vocab_namespace = tokens
+2020-05-22 12:51:25,059 - INFO - allennlp.common.params - embedding_dim = 300
+2020-05-22 12:51:25,059 - INFO - allennlp.common.params - pretrained_file = /home/liangzhi/AI_services/supermind/autonlp/data/resources/sgns.renmin.word.gz
+2020-05-22 12:51:25,059 - INFO - allennlp.common.params - projection_dim = None
+2020-05-22 12:51:25,059 - INFO - allennlp.common.params - trainable = False
+2020-05-22 12:51:25,059 - INFO - allennlp.common.params - padding_index = None
+2020-05-22 12:51:25,059 - INFO - allennlp.common.params - max_norm = None
+2020-05-22 12:51:25,059 - INFO - allennlp.common.params - norm_type = 2.0
+2020-05-22 12:51:25,059 - INFO - allennlp.common.params - scale_grad_by_freq = False
+2020-05-22 12:51:25,059 - INFO - allennlp.common.params - sparse = False
+2020-05-22 12:51:25,060 - INFO - allennlp.modules.token_embedders.embedding - Reading pretrained embeddings from file
+2020-05-22 12:51:25,095 - INFO - allennlp.modules.token_embedders.embedding - Recognized a header line in the embedding file with number of tokens: 355987
+100%|██████████| 711/711 [00:00<00:00, 27630.67it/s]
+
+  0%|          | 0/355987 [00:00<?, ?it/s]
+2020-05-22 12:51:33,734 - INFO - allennlp.modules.token_embedders.embedding - Initializing pre-trained embedding layer
+2020-05-22 12:51:33,779 - INFO - allennlp.modules.token_embedders.embedding - Pretrained embeddings were found for 3199 out of 4025 tokens
+2020-05-22 12:51:33,788 - INFO - allennlp.nn.initializers - Initializing parameters
+2020-05-22 12:51:33,788 - INFO - allennlp.nn.initializers - Done initializing parameters; the following parameters are using their default initialization from their code
+2020-05-22 12:51:33,788 - INFO - allennlp.nn.initializers -    crf._constraint_mask
+2020-05-22 12:51:33,789 - INFO - allennlp.nn.initializers -    crf.end_transitions
+2020-05-22 12:51:33,789 - INFO - allennlp.nn.initializers -    crf.start_transitions
+2020-05-22 12:51:33,789 - INFO - allennlp.nn.initializers -    crf.transitions
+2020-05-22 12:51:33,789 - INFO - allennlp.nn.initializers -    encoder._module.bias_hh_l0
+2020-05-22 12:51:33,789 - INFO - allennlp.nn.initializers -    encoder._module.bias_hh_l0_reverse
+2020-05-22 12:51:33,789 - INFO - allennlp.nn.initializers -    encoder._module.bias_ih_l0
+2020-05-22 12:51:33,789 - INFO - allennlp.nn.initializers -    encoder._module.bias_ih_l0_reverse
+2020-05-22 12:51:33,789 - INFO - allennlp.nn.initializers -    encoder._module.weight_hh_l0
+2020-05-22 12:51:33,789 - INFO - allennlp.nn.initializers -    encoder._module.weight_hh_l0_reverse
+2020-05-22 12:51:33,789 - INFO - allennlp.nn.initializers -    encoder._module.weight_ih_l0
+2020-05-22 12:51:33,789 - INFO - allennlp.nn.initializers -    encoder._module.weight_ih_l0_reverse
+2020-05-22 12:51:33,789 - INFO - allennlp.nn.initializers -    tag_projection_layer._module.bias
+2020-05-22 12:51:33,789 - INFO - allennlp.nn.initializers -    tag_projection_layer._module.weight
+2020-05-22 12:51:33,789 - INFO - allennlp.nn.initializers -    text_field_embedder.token_embedder_tokens.weight
+2020-05-22 12:51:38,044 - INFO - __main__ - use cuda device 0
+2020-05-22 12:51:38,044 - WARNING - allennlp.training.trainer - You provided a validation dataset but patience was set to None, meaning that early stopping is disabled
+2020-05-22 12:51:38,384 - INFO - allennlp.training.trainer - Beginning training.
+2020-05-22 12:51:38,384 - INFO - allennlp.training.trainer - Epoch 0/39
+2020-05-22 12:51:38,384 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2635.18
+2020-05-22 12:51:38,494 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2126
+100%|██████████| 355987/355987 [00:08<00:00, 41236.98it/s]
+
+2020-05-22 12:51:38,495 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/9 [00:00<?, ?it/s]
+2020-05-22 12:51:42,431 - INFO - allennlp.training.trainer - Validating
+accuracy: 0.5858, accuracy3: 0.6112, precision-overall: 0.0033, recall-overall: 0.0050, f1-measure-overall: 0.0040, loss: 5187.6630 ||: 100%|██████████| 9/9 [00:03<00:00,  2.29it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:51:43,305 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:51:43,306 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2126.000  |       N/A
+2020-05-22 12:51:43,306 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2635.180  |       N/A
+2020-05-22 12:51:43,306 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.611  |     0.787
+2020-05-22 12:51:43,306 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.004  |     0.000
+2020-05-22 12:51:43,306 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.003  |     0.000
+2020-05-22 12:51:43,307 - INFO - allennlp.training.tensorboard_writer - loss               |  5187.663  |  2347.297
+2020-05-22 12:51:43,307 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.005  |     0.000
+2020-05-22 12:51:43,307 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.586  |     0.757
+2020-05-22 12:51:43,318 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to 'output/best.th'.
+2020-05-22 12:51:43,324 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.939763
+2020-05-22 12:51:43,324 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:03:12
+2020-05-22 12:51:43,325 - INFO - allennlp.training.trainer - Epoch 1/39
+2020-05-22 12:51:43,325 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2660.324
+2020-05-22 12:51:43,483 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+2020-05-22 12:51:43,484 - INFO - allennlp.training.trainer - Training
+accuracy: 0.7567, accuracy3: 0.7872, precision-overall: 0.0000, recall-overall: 0.0000, f1-measure-overall: 0.0000, loss: 2347.2969 ||: 100%|██████████| 3/3 [00:00<00:00,  3.44it/s]
+
+  0%|          | 0/9 [00:00<?, ?it/s]
+2020-05-22 12:51:47,340 - INFO - allennlp.training.trainer - Validating
+accuracy: 0.7608, accuracy3: 0.7864, precision-overall: 0.0000, recall-overall: 0.0000, f1-measure-overall: 0.0000, loss: 3522.3854 ||: 100%|██████████| 9/9 [00:03<00:00,  2.33it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:51:48,045 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:51:48,046 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:51:48,046 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2660.324  |       N/A
+2020-05-22 12:51:48,046 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.786  |     0.787
+2020-05-22 12:51:48,046 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.000  |     0.000
+2020-05-22 12:51:48,047 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.000  |     0.000
+2020-05-22 12:51:48,047 - INFO - allennlp.training.tensorboard_writer - loss               |  3522.385  |  2133.572
+2020-05-22 12:51:48,047 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.000  |     0.000
+2020-05-22 12:51:48,047 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.761  |     0.757
+2020-05-22 12:51:48,058 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to 'output/best.th'.
+2020-05-22 12:51:48,066 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.741355
+2020-05-22 12:51:48,066 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:03:03
+2020-05-22 12:51:48,066 - INFO - allennlp.training.trainer - Epoch 2/39
+2020-05-22 12:51:48,066 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2660.44
+2020-05-22 12:51:48,228 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+2020-05-22 12:51:48,229 - INFO - allennlp.training.trainer - Training
+accuracy: 0.7566, accuracy3: 0.7870, precision-overall: 0.0000, recall-overall: 0.0000, f1-measure-overall: 0.0000, loss: 2133.5720 ||: 100%|██████████| 3/3 [00:00<00:00,  4.25it/s]
+
+  0%|          | 0/9 [00:00<?, ?it/s]
+2020-05-22 12:51:51,886 - INFO - allennlp.training.trainer - Validating
+accuracy: 0.7602, accuracy3: 0.7857, precision-overall: 0.0417, recall-overall: 0.0004, f1-measure-overall: 0.0007, loss: 2990.8489 ||: 100%|██████████| 9/9 [00:03<00:00,  2.46it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:51:52,692 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:51:52,693 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:51:52,693 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2660.440  |       N/A
+2020-05-22 12:51:52,693 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.786  |     0.787
+2020-05-22 12:51:52,693 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.001  |     0.000
+2020-05-22 12:51:52,693 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.042  |     0.000
+2020-05-22 12:51:52,694 - INFO - allennlp.training.tensorboard_writer - loss               |  2990.849  |  1772.153
+2020-05-22 12:51:52,694 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.000  |     0.000
+2020-05-22 12:51:52,694 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.760  |     0.757
+2020-05-22 12:51:52,705 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to 'output/best.th'.
+2020-05-22 12:51:52,713 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.647258
+2020-05-22 12:51:52,714 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:02:56
+2020-05-22 12:51:52,714 - INFO - allennlp.training.trainer - Epoch 3/39
+2020-05-22 12:51:52,714 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2660.712
+2020-05-22 12:51:52,884 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+accuracy: 0.7567, accuracy3: 0.7872, precision-overall: 0.0000, recall-overall: 0.0000, f1-measure-overall: 0.0000, loss: 1772.1526 ||: 100%|██████████| 3/3 [00:00<00:00,  3.73it/s]
+
+2020-05-22 12:51:52,885 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/9 [00:00<?, ?it/s]
+2020-05-22 12:51:57,790 - INFO - allennlp.training.trainer - Validating
+accuracy: 0.7680, accuracy3: 0.7912, precision-overall: 0.4861, recall-overall: 0.0559, f1-measure-overall: 0.1003, loss: 2383.5643 ||: 100%|██████████| 9/9 [00:04<00:00,  1.84it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:51:58,441 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:51:58,441 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:51:58,442 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2660.712  |       N/A
+2020-05-22 12:51:58,443 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.791  |     0.815
+2020-05-22 12:51:58,443 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.100  |     0.413
+2020-05-22 12:51:58,443 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.486  |     0.503
+2020-05-22 12:51:58,443 - INFO - allennlp.training.tensorboard_writer - loss               |  2383.564  |  1303.894
+2020-05-22 12:51:58,444 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.056  |     0.351
+2020-05-22 12:51:58,444 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.768  |     0.800
+2020-05-22 12:51:58,455 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to 'output/best.th'.
+2020-05-22 12:51:58,463 - INFO - allennlp.training.trainer - Epoch duration: 0:00:05.749400
+2020-05-22 12:51:58,463 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:03:00
+2020-05-22 12:51:58,463 - INFO - allennlp.training.trainer - Epoch 4/39
+2020-05-22 12:51:58,463 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2660.992
+2020-05-22 12:51:58,636 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+accuracy: 0.8002, accuracy3: 0.8151, precision-overall: 0.5033, recall-overall: 0.3507, f1-measure-overall: 0.4134, loss: 1303.8940 ||: 100%|██████████| 3/3 [00:00<00:00,  4.62it/s]
+
+2020-05-22 12:51:58,637 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/9 [00:00<?, ?it/s]
+2020-05-22 12:52:03,441 - INFO - allennlp.training.trainer - Validating
+accuracy: 0.7924, accuracy3: 0.8089, precision-overall: 0.4887, recall-overall: 0.2837, f1-measure-overall: 0.3590, loss: 1927.2968 ||: 100%|██████████| 9/9 [00:04<00:00,  1.87it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:52:04,105 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:52:04,105 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:52:04,105 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2660.992  |       N/A
+2020-05-22 12:52:04,105 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.809  |     0.843
+2020-05-22 12:52:04,106 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.359  |     0.549
+2020-05-22 12:52:04,106 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.489  |     0.651
+2020-05-22 12:52:04,106 - INFO - allennlp.training.tensorboard_writer - loss               |  1927.297  |  1009.250
+2020-05-22 12:52:04,106 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.284  |     0.475
+2020-05-22 12:52:04,106 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.792  |     0.831
+2020-05-22 12:52:04,117 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to 'output/best.th'.
+2020-05-22 12:52:04,125 - INFO - allennlp.training.trainer - Epoch duration: 0:00:05.661688
+2020-05-22 12:52:04,125 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:03:00
+2020-05-22 12:52:04,125 - INFO - allennlp.training.trainer - Epoch 5/39
+2020-05-22 12:52:04,125 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2660.996
+2020-05-22 12:52:04,283 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+accuracy: 0.8312, accuracy3: 0.8431, precision-overall: 0.6513, recall-overall: 0.4747, f1-measure-overall: 0.5492, loss: 1009.2500 ||: 100%|██████████| 3/3 [00:00<00:00,  4.52it/s]
+
+2020-05-22 12:52:04,284 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/9 [00:00<?, ?it/s]
+2020-05-22 12:52:08,059 - INFO - allennlp.training.trainer - Validating
+accuracy: 0.8279, accuracy3: 0.8355, precision-overall: 0.5490, recall-overall: 0.4389, f1-measure-overall: 0.4878, loss: 1541.3325 ||: 100%|██████████| 9/9 [00:03<00:00,  2.38it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:52:09,058 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:52:09,058 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:52:09,059 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2660.996  |       N/A
+2020-05-22 12:52:09,059 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.836  |     0.863
+2020-05-22 12:52:09,059 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.488  |     0.643
+2020-05-22 12:52:09,059 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.549  |     0.696
+2020-05-22 12:52:09,059 - INFO - allennlp.training.tensorboard_writer - loss               |  1541.332  |   832.425
+2020-05-22 12:52:09,060 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.439  |     0.597
+2020-05-22 12:52:09,060 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.828  |     0.859
+2020-05-22 12:52:09,070 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to 'output/best.th'.
+2020-05-22 12:52:09,079 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.953305
+2020-05-22 12:52:09,079 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:02:53
+2020-05-22 12:52:09,079 - INFO - allennlp.training.trainer - Epoch 6/39
+2020-05-22 12:52:09,079 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2661.168
+accuracy: 0.8588, accuracy3: 0.8627, precision-overall: 0.6964, recall-overall: 0.5972, f1-measure-overall: 0.6430, loss: 832.4254 ||: 100%|██████████| 3/3 [00:00<00:00,  3.00it/s]
+
+2020-05-22 12:52:09,240 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+2020-05-22 12:52:09,241 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/9 [00:00<?, ?it/s]
+2020-05-22 12:52:13,301 - INFO - allennlp.training.trainer - Validating
+accuracy: 0.8490, accuracy3: 0.8542, precision-overall: 0.6374, recall-overall: 0.5151, f1-measure-overall: 0.5698, loss: 1264.3166 ||: 100%|██████████| 9/9 [00:04<00:00,  2.22it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:52:14,160 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:52:14,160 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:52:14,161 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2661.168  |       N/A
+2020-05-22 12:52:14,161 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.854  |     0.869
+2020-05-22 12:52:14,161 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.570  |     0.672
+2020-05-22 12:52:14,161 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.637  |     0.618
+2020-05-22 12:52:14,162 - INFO - allennlp.training.tensorboard_writer - loss               |  1264.317  |   751.450
+2020-05-22 12:52:14,162 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.515  |     0.737
+2020-05-22 12:52:14,162 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.849  |     0.866
+2020-05-22 12:52:14,173 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to 'output/best.th'.
+2020-05-22 12:52:14,182 - INFO - allennlp.training.trainer - Epoch duration: 0:00:05.102926
+2020-05-22 12:52:14,182 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:02:48
+2020-05-22 12:52:14,182 - INFO - allennlp.training.trainer - Epoch 7/39
+2020-05-22 12:52:14,182 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2661.168
+2020-05-22 12:52:14,339 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+2020-05-22 12:52:14,340 - INFO - allennlp.training.trainer - Training
+accuracy: 0.8662, accuracy3: 0.8686, precision-overall: 0.6183, recall-overall: 0.7366, f1-measure-overall: 0.6723, loss: 751.4499 ||: 100%|██████████| 3/3 [00:00<00:00,  3.50it/s]
+
+  0%|          | 0/9 [00:00<?, ?it/s]
+2020-05-22 12:52:19,271 - INFO - allennlp.training.trainer - Validating
+accuracy: 0.8656, accuracy3: 0.8684, precision-overall: 0.6463, recall-overall: 0.6127, f1-measure-overall: 0.6290, loss: 1080.4781 ||: 100%|██████████| 9/9 [00:04<00:00,  1.83it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:52:20,246 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:52:20,247 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:52:20,247 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2661.168  |       N/A
+2020-05-22 12:52:20,247 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.868  |     0.885
+2020-05-22 12:52:20,247 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.629  |     0.704
+2020-05-22 12:52:20,248 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.646  |     0.813
+2020-05-22 12:52:20,248 - INFO - allennlp.training.tensorboard_writer - loss               |  1080.478  |   570.204
+2020-05-22 12:52:20,248 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.613  |     0.620
+2020-05-22 12:52:20,248 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.866  |     0.878
+2020-05-22 12:52:20,261 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to 'output/best.th'.
+2020-05-22 12:52:20,277 - INFO - allennlp.training.trainer - Epoch duration: 0:00:06.095312
+2020-05-22 12:52:20,278 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:02:47
+2020-05-22 12:52:20,278 - INFO - allennlp.training.trainer - Epoch 8/39
+2020-05-22 12:52:20,278 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2664.48
+2020-05-22 12:52:20,430 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+accuracy: 0.8782, accuracy3: 0.8854, precision-overall: 0.8133, recall-overall: 0.6202, f1-measure-overall: 0.7037, loss: 570.2037 ||: 100%|██████████| 3/3 [00:00<00:00,  3.08it/s]
+2020-05-22 12:52:20,431 - INFO - allennlp.training.trainer - Training
+
+  0%|          | 0/9 [00:00<?, ?it/s]
+2020-05-22 12:52:25,061 - INFO - allennlp.training.trainer - Validating
+accuracy: 0.8853, accuracy3: 0.8896, precision-overall: 0.6998, recall-overall: 0.6490, f1-measure-overall: 0.6734, loss: 882.4282 ||: 100%|██████████| 9/9 [00:04<00:00,  1.95it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:52:26,099 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:52:26,100 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:52:26,100 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2664.480  |       N/A
+2020-05-22 12:52:26,100 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.890  |     0.906
+2020-05-22 12:52:26,100 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.673  |     0.749
+2020-05-22 12:52:26,101 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.700  |     0.779
+2020-05-22 12:52:26,101 - INFO - allennlp.training.tensorboard_writer - loss               |   882.428  |   466.749
+2020-05-22 12:52:26,101 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.649  |     0.721
+2020-05-22 12:52:26,101 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.885  |     0.903
+2020-05-22 12:52:26,112 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to 'output/best.th'.
+2020-05-22 12:52:26,120 - INFO - allennlp.training.trainer - Epoch duration: 0:00:05.842845
+2020-05-22 12:52:26,121 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:02:44
+2020-05-22 12:52:26,121 - INFO - allennlp.training.trainer - Epoch 9/39
+2020-05-22 12:52:26,121 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2664.54
+2020-05-22 12:52:26,283 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+2020-05-22 12:52:26,284 - INFO - allennlp.training.trainer - Training
+accuracy: 0.9027, accuracy3: 0.9062, precision-overall: 0.7785, recall-overall: 0.7213, f1-measure-overall: 0.7488, loss: 466.7494 ||: 100%|██████████| 3/3 [00:01<00:00,  2.89it/s]
+
+  0%|          | 0/9 [00:00<?, ?it/s]
+2020-05-22 12:52:30,092 - INFO - allennlp.training.trainer - Validating
+accuracy: 0.8982, accuracy3: 0.9017, precision-overall: 0.7301, recall-overall: 0.6743, f1-measure-overall: 0.7011, loss: 741.1696 ||: 100%|██████████| 9/9 [00:03<00:00,  2.36it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:52:30,888 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:52:30,888 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:52:30,888 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2664.540  |       N/A
+2020-05-22 12:52:30,889 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.902  |     0.915
+2020-05-22 12:52:30,889 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.701  |     0.786
+2020-05-22 12:52:30,889 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.730  |     0.774
+2020-05-22 12:52:30,889 - INFO - allennlp.training.tensorboard_writer - loss               |   741.170  |   418.769
+2020-05-22 12:52:30,889 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.674  |     0.798
+2020-05-22 12:52:30,890 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.898  |     0.911
+2020-05-22 12:52:30,900 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to 'output/best.th'.
+2020-05-22 12:52:30,909 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.787927
+2020-05-22 12:52:30,909 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:02:37
+2020-05-22 12:52:30,909 - INFO - allennlp.training.trainer - Epoch 10/39
+2020-05-22 12:52:30,909 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2664.6
+2020-05-22 12:52:31,089 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+accuracy: 0.9109, accuracy3: 0.9145, precision-overall: 0.7741, recall-overall: 0.7979, f1-measure-overall: 0.7858, loss: 418.7690 ||: 100%|██████████| 3/3 [00:00<00:00,  3.77it/s]
+
+2020-05-22 12:52:31,090 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/9 [00:00<?, ?it/s]
+2020-05-22 12:52:35,682 - INFO - allennlp.training.trainer - Validating
+accuracy: 0.9182, accuracy3: 0.9206, precision-overall: 0.7565, recall-overall: 0.7686, f1-measure-overall: 0.7625, loss: 629.7047 ||: 100%|██████████| 9/9 [00:04<00:00,  1.96it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:52:36,856 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:52:36,856 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:52:36,856 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2664.600  |       N/A
+2020-05-22 12:52:36,856 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.921  |     0.926
+2020-05-22 12:52:36,857 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.762  |     0.783
+2020-05-22 12:52:36,857 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.756  |     0.881
+2020-05-22 12:52:36,857 - INFO - allennlp.training.tensorboard_writer - loss               |   629.705  |   405.797
+2020-05-22 12:52:36,857 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.769  |     0.704
+2020-05-22 12:52:36,858 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.918  |     0.920
+2020-05-22 12:52:36,869 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to 'output/best.th'.
+2020-05-22 12:52:36,878 - INFO - allennlp.training.trainer - Epoch duration: 0:00:05.968634
+2020-05-22 12:52:36,878 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:02:34
+2020-05-22 12:52:36,878 - INFO - allennlp.training.trainer - Epoch 11/39
+2020-05-22 12:52:36,878 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2664.68
+accuracy: 0.9198, accuracy3: 0.9258, precision-overall: 0.8812, recall-overall: 0.7044, f1-measure-overall: 0.7830, loss: 405.7974 ||: 100%|██████████| 3/3 [00:01<00:00,  2.56it/s]
+
+2020-05-22 12:52:37,038 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+2020-05-22 12:52:37,039 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/9 [00:00<?, ?it/s]
+2020-05-22 12:52:41,515 - INFO - allennlp.training.trainer - Validating
+accuracy: 0.9211, accuracy3: 0.9244, precision-overall: 0.7752, recall-overall: 0.7487, f1-measure-overall: 0.7617, loss: 595.1986 ||: 100%|██████████| 9/9 [00:04<00:00,  2.01it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:52:42,311 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:52:42,311 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:52:42,312 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2664.680  |       N/A
+2020-05-22 12:52:42,312 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.924  |     0.937
+2020-05-22 12:52:42,312 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.762  |     0.816
+2020-05-22 12:52:42,312 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.775  |     0.862
+2020-05-22 12:52:42,312 - INFO - allennlp.training.tensorboard_writer - loss               |   595.199  |   334.835
+2020-05-22 12:52:42,313 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.749  |     0.775
+2020-05-22 12:52:42,313 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.921  |     0.934
+2020-05-22 12:52:42,324 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to 'output/best.th'.
+2020-05-22 12:52:42,333 - INFO - allennlp.training.trainer - Epoch duration: 0:00:05.455240
+2020-05-22 12:52:42,333 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:02:29
+2020-05-22 12:52:42,333 - INFO - allennlp.training.trainer - Epoch 12/39
+2020-05-22 12:52:42,333 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2664.78
+2020-05-22 12:52:42,527 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+accuracy: 0.9336, accuracy3: 0.9371, precision-overall: 0.8620, recall-overall: 0.7749, f1-measure-overall: 0.8161, loss: 334.8348 ||: 100%|██████████| 3/3 [00:00<00:00,  3.77it/s]
+
+2020-05-22 12:52:42,528 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/9 [00:00<?, ?it/s]
+2020-05-22 12:52:47,252 - INFO - allennlp.training.trainer - Validating
+accuracy: 0.9381, accuracy3: 0.9402, precision-overall: 0.8148, recall-overall: 0.7989, f1-measure-overall: 0.8068, loss: 478.6497 ||: 100%|██████████| 9/9 [00:04<00:00,  1.91it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:52:47,994 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:52:47,994 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:52:47,994 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2664.780  |       N/A
+2020-05-22 12:52:47,995 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.940  |     0.938
+2020-05-22 12:52:47,995 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.807  |     0.832
+2020-05-22 12:52:47,995 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.815  |     0.816
+2020-05-22 12:52:47,995 - INFO - allennlp.training.tensorboard_writer - loss               |   478.650  |   328.070
+2020-05-22 12:52:47,996 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.799  |     0.848
+2020-05-22 12:52:47,996 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.938  |     0.934
+2020-05-22 12:52:48,007 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to 'output/best.th'.
+2020-05-22 12:52:48,016 - INFO - allennlp.training.trainer - Epoch duration: 0:00:05.682407
+2020-05-22 12:52:48,016 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:02:24
+2020-05-22 12:52:48,016 - INFO - allennlp.training.trainer - Epoch 13/39
+2020-05-22 12:52:48,016 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2664.78
+2020-05-22 12:52:48,181 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+2020-05-22 12:52:48,182 - INFO - allennlp.training.trainer - Training
+accuracy: 0.9341, accuracy3: 0.9379, precision-overall: 0.8159, recall-overall: 0.8484, f1-measure-overall: 0.8318, loss: 328.0699 ||: 100%|██████████| 3/3 [00:00<00:00,  4.05it/s]
+
+  0%|          | 0/9 [00:00<?, ?it/s]
+2020-05-22 12:52:52,063 - INFO - allennlp.training.trainer - Validating
+accuracy: 0.9468, accuracy3: 0.9488, precision-overall: 0.8277, recall-overall: 0.8277, f1-measure-overall: 0.8277, loss: 416.5790 ||: 100%|██████████| 9/9 [00:03<00:00,  2.32it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:52:52,830 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:52:52,831 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:52:52,831 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2664.780  |       N/A
+2020-05-22 12:52:52,831 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.949  |     0.952
+2020-05-22 12:52:52,831 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.828  |     0.851
+2020-05-22 12:52:52,831 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.828  |     0.868
+2020-05-22 12:52:52,832 - INFO - allennlp.training.tensorboard_writer - loss               |   416.579  |   267.780
+2020-05-22 12:52:52,832 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.828  |     0.835
+2020-05-22 12:52:52,832 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.947  |     0.949
+2020-05-22 12:52:52,843 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to 'output/best.th'.
+2020-05-22 12:52:52,851 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.835462
+2020-05-22 12:52:52,852 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:02:18
+2020-05-22 12:52:52,852 - INFO - allennlp.training.trainer - Epoch 14/39
+2020-05-22 12:52:52,852 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2664.78
+accuracy: 0.9492, accuracy3: 0.9520, precision-overall: 0.8678, recall-overall: 0.8346, f1-measure-overall: 0.8509, loss: 267.7804 ||: 100%|██████████| 3/3 [00:00<00:00,  3.91it/s]
+
+2020-05-22 12:52:53,009 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+2020-05-22 12:52:53,010 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/9 [00:00<?, ?it/s]
+2020-05-22 12:52:56,609 - INFO - allennlp.training.trainer - Validating
+accuracy: 0.9578, accuracy3: 0.9600, precision-overall: 0.8631, recall-overall: 0.8530, f1-measure-overall: 0.8580, loss: 344.4347 ||: 100%|██████████| 9/9 [00:03<00:00,  2.50it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:52:57,258 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:52:57,259 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:52:57,259 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2664.780  |       N/A
+2020-05-22 12:52:57,259 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.960  |     0.956
+2020-05-22 12:52:57,259 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.858  |     0.863
+2020-05-22 12:52:57,262 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.863  |     0.882
+2020-05-22 12:52:57,262 - INFO - allennlp.training.tensorboard_writer - loss               |   344.435  |   249.539
+2020-05-22 12:52:57,262 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.853  |     0.845
+2020-05-22 12:52:57,262 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.958  |     0.953
+2020-05-22 12:52:57,275 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to 'output/best.th'.
+2020-05-22 12:52:57,293 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.440976
+2020-05-22 12:52:57,293 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:02:11
+2020-05-22 12:52:57,293 - INFO - allennlp.training.trainer - Epoch 15/39
+2020-05-22 12:52:57,293 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2664.78
+2020-05-22 12:52:57,486 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+accuracy: 0.9532, accuracy3: 0.9560, precision-overall: 0.8818, recall-overall: 0.8453, f1-measure-overall: 0.8632, loss: 249.5394 ||: 100%|██████████| 3/3 [00:00<00:00,  4.62it/s]
+
+2020-05-22 12:52:57,487 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/9 [00:00<?, ?it/s]
+2020-05-22 12:53:01,892 - INFO - allennlp.training.trainer - Validating
+accuracy: 0.9608, accuracy3: 0.9621, precision-overall: 0.8702, recall-overall: 0.8548, f1-measure-overall: 0.8624, loss: 316.1740 ||: 100%|██████████| 9/9 [00:04<00:00,  2.04it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:53:03,070 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:53:03,070 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:53:03,071 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2664.780  |       N/A
+2020-05-22 12:53:03,071 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.962  |     0.954
+2020-05-22 12:53:03,071 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.862  |     0.866
+2020-05-22 12:53:03,071 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.870  |     0.863
+2020-05-22 12:53:03,072 - INFO - allennlp.training.tensorboard_writer - loss               |   316.174  |   244.526
+2020-05-22 12:53:03,072 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.855  |     0.868
+2020-05-22 12:53:03,072 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.961  |     0.951
+2020-05-22 12:53:03,084 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to 'output/best.th'.
+2020-05-22 12:53:03,094 - INFO - allennlp.training.trainer - Epoch duration: 0:00:05.801246
+2020-05-22 12:53:03,094 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:02:07
+2020-05-22 12:53:03,094 - INFO - allennlp.training.trainer - Epoch 16/39
+2020-05-22 12:53:03,095 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2664.78
+2020-05-22 12:53:03,260 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+accuracy: 0.9507, accuracy3: 0.9539, precision-overall: 0.8630, recall-overall: 0.8683, f1-measure-overall: 0.8656, loss: 244.5264 ||: 100%|██████████| 3/3 [00:01<00:00,  2.55it/s]
+
+2020-05-22 12:53:03,260 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/9 [00:00<?, ?it/s]
+2020-05-22 12:53:07,217 - INFO - allennlp.training.trainer - Validating
+accuracy: 0.9617, accuracy3: 0.9633, precision-overall: 0.8838, recall-overall: 0.8661, f1-measure-overall: 0.8749, loss: 294.5510 ||: 100%|██████████| 9/9 [00:03<00:00,  2.28it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:53:08,192 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:53:08,192 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:53:08,193 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2664.780  |       N/A
+2020-05-22 12:53:08,193 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.963  |     0.960
+2020-05-22 12:53:08,193 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.875  |     0.883
+2020-05-22 12:53:08,193 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.884  |     0.886
+2020-05-22 12:53:08,193 - INFO - allennlp.training.tensorboard_writer - loss               |   294.551  |   237.849
+2020-05-22 12:53:08,194 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.866  |     0.881
+2020-05-22 12:53:08,194 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.962  |     0.958
+2020-05-22 12:53:08,205 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to 'output/best.th'.
+2020-05-22 12:53:08,214 - INFO - allennlp.training.trainer - Epoch duration: 0:00:05.119244
+2020-05-22 12:53:08,214 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:02:01
+2020-05-22 12:53:08,214 - INFO - allennlp.training.trainer - Epoch 17/39
+2020-05-22 12:53:08,214 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2664.78
+2020-05-22 12:53:08,373 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+accuracy: 0.9578, accuracy3: 0.9605, precision-overall: 0.8860, recall-overall: 0.8806, f1-measure-overall: 0.8833, loss: 237.8489 ||: 100%|██████████| 3/3 [00:00<00:00,  3.08it/s]
+
+2020-05-22 12:53:08,374 - INFO - allennlp.training.trainer - Training
+2020-05-22 12:53:12,243 - INFO - allennlp.training.trainer - Validating
+  0%|          | 0/9 [00:00<?, ?it/s]
+accuracy: 0.9633, accuracy3: 0.9647, precision-overall: 0.8698, recall-overall: 0.8800, f1-measure-overall: 0.8749, loss: 286.7109 ||: 100%|██████████| 9/9 [00:03<00:00,  2.33it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:53:12,895 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:53:12,896 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:53:12,896 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2664.780  |       N/A
+2020-05-22 12:53:12,896 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.965  |     0.961
+2020-05-22 12:53:12,896 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.875  |     0.881
+2020-05-22 12:53:12,896 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.870  |     0.909
+2020-05-22 12:53:12,897 - INFO - allennlp.training.tensorboard_writer - loss               |   286.711  |   241.305
+2020-05-22 12:53:12,897 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.880  |     0.855
+2020-05-22 12:53:12,897 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.963  |     0.958
+2020-05-22 12:53:13,305 - INFO - allennlp.training.trainer - Epoch duration: 0:00:05.091145
+2020-05-22 12:53:13,305 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:56
+2020-05-22 12:53:13,305 - INFO - allennlp.training.trainer - Epoch 18/39
+2020-05-22 12:53:13,306 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2664.78
+2020-05-22 12:53:13,413 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+accuracy: 0.9578, accuracy3: 0.9609, precision-overall: 0.9088, recall-overall: 0.8545, f1-measure-overall: 0.8808, loss: 241.3053 ||: 100%|██████████| 3/3 [00:00<00:00,  4.60it/s]
+
+2020-05-22 12:53:13,415 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/9 [00:00<?, ?it/s]
+2020-05-22 12:53:16,987 - INFO - allennlp.training.trainer - Validating
+accuracy: 0.9669, accuracy3: 0.9681, precision-overall: 0.8838, recall-overall: 0.8960, f1-measure-overall: 0.8899, loss: 263.3240 ||: 100%|██████████| 9/9 [00:03<00:00,  2.52it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:53:17,791 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:53:17,791 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:53:17,791 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2664.780  |       N/A
+2020-05-22 12:53:17,792 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.968  |     0.952
+2020-05-22 12:53:17,792 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.890  |     0.856
+2020-05-22 12:53:17,792 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.884  |     0.895
+2020-05-22 12:53:17,792 - INFO - allennlp.training.tensorboard_writer - loss               |   263.324  |   270.483
+2020-05-22 12:53:17,792 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.896  |     0.821
+2020-05-22 12:53:17,793 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.967  |     0.948
+2020-05-22 12:53:17,803 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.497763
+2020-05-22 12:53:17,803 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:49
+2020-05-22 12:53:17,804 - INFO - allennlp.training.trainer - Epoch 19/39
+2020-05-22 12:53:17,804 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2664.78
+2020-05-22 12:53:17,957 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+accuracy: 0.9478, accuracy3: 0.9520, precision-overall: 0.8948, recall-overall: 0.8208, f1-measure-overall: 0.8562, loss: 270.4825 ||: 100%|██████████| 3/3 [00:00<00:00,  3.74it/s]
+
+2020-05-22 12:53:17,958 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/9 [00:00<?, ?it/s]
+2020-05-22 12:53:21,644 - INFO - allennlp.training.trainer - Validating
+accuracy: 0.9700, accuracy3: 0.9713, precision-overall: 0.8981, recall-overall: 0.8939, f1-measure-overall: 0.8960, loss: 230.0553 ||: 100%|██████████| 9/9 [00:03<00:00,  2.44it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:53:22,399 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:53:22,399 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:53:22,400 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2664.780  |       N/A
+2020-05-22 12:53:22,400 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.971  |     0.962
+2020-05-22 12:53:22,400 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.896  |     0.884
+2020-05-22 12:53:22,400 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.898  |     0.909
+2020-05-22 12:53:22,400 - INFO - allennlp.training.tensorboard_writer - loss               |   230.055  |   216.713
+2020-05-22 12:53:22,400 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.894  |     0.861
+2020-05-22 12:53:22,401 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.970  |     0.959
+2020-05-22 12:53:22,411 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to 'output/best.th'.
+2020-05-22 12:53:22,420 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.616510
+2020-05-22 12:53:22,420 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:44
+2020-05-22 12:53:22,420 - INFO - allennlp.training.trainer - Epoch 20/39
+2020-05-22 12:53:22,420 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2664.78
+2020-05-22 12:53:22,591 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+accuracy: 0.9592, accuracy3: 0.9622, precision-overall: 0.9094, recall-overall: 0.8606, f1-measure-overall: 0.8843, loss: 216.7125 ||: 100%|██████████| 3/3 [00:00<00:00,  3.98it/s]
+
+2020-05-22 12:53:22,592 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/9 [00:00<?, ?it/s]
+2020-05-22 12:53:27,142 - INFO - allennlp.training.trainer - Validating
+accuracy: 0.9770, accuracy3: 0.9784, precision-overall: 0.9145, recall-overall: 0.9103, f1-measure-overall: 0.9124, loss: 185.5453 ||: 100%|██████████| 9/9 [00:04<00:00,  1.98it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:53:27,921 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:53:27,922 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:53:27,922 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2664.780  |       N/A
+2020-05-22 12:53:27,922 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.978  |     0.961
+2020-05-22 12:53:27,922 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.912  |     0.893
+2020-05-22 12:53:27,922 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.915  |     0.880
+2020-05-22 12:53:27,923 - INFO - allennlp.training.tensorboard_writer - loss               |   185.545  |   202.396
+2020-05-22 12:53:27,923 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.910  |     0.907
+2020-05-22 12:53:27,923 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.977  |     0.958
+2020-05-22 12:53:27,934 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to 'output/best.th'.
+2020-05-22 12:53:27,945 - INFO - allennlp.training.trainer - Epoch duration: 0:00:05.524418
+2020-05-22 12:53:27,945 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:39
+2020-05-22 12:53:27,945 - INFO - allennlp.training.trainer - Epoch 21/39
+2020-05-22 12:53:27,945 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2664.78
+2020-05-22 12:53:28,101 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+2020-05-22 12:53:28,102 - INFO - allennlp.training.trainer - Training
+accuracy: 0.9580, accuracy3: 0.9606, precision-overall: 0.8796, recall-overall: 0.9066, f1-measure-overall: 0.8929, loss: 202.3961 ||: 100%|██████████| 3/3 [00:00<00:00,  3.86it/s]
+
+  0%|          | 0/9 [00:00<?, ?it/s]
+accuracy: 0.9816, accuracy3: 0.9825, precision-overall: 0.9293, recall-overall: 0.9260, f1-measure-overall: 0.9276, loss: 159.5600 ||: 100%|██████████| 9/9 [00:03<00:00,  2.25it/s]
+
+2020-05-22 12:53:32,101 - INFO - allennlp.training.trainer - Validating
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:53:33,053 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:53:33,053 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:53:33,055 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2664.780  |       N/A
+2020-05-22 12:53:33,055 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.983  |     0.965
+2020-05-22 12:53:33,056 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.928  |     0.896
+2020-05-22 12:53:33,056 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.929  |     0.905
+2020-05-22 12:53:33,056 - INFO - allennlp.training.tensorboard_writer - loss               |   159.560  |   207.504
+2020-05-22 12:53:33,056 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.926  |     0.887
+2020-05-22 12:53:33,056 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.982  |     0.961
+2020-05-22 12:53:33,070 - INFO - allennlp.training.trainer - Epoch duration: 0:00:05.124578
+2020-05-22 12:53:33,070 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:33
+2020-05-22 12:53:33,070 - INFO - allennlp.training.trainer - Epoch 22/39
+2020-05-22 12:53:33,070 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2664.78
+accuracy: 0.9615, accuracy3: 0.9646, precision-overall: 0.9047, recall-overall: 0.8867, f1-measure-overall: 0.8956, loss: 207.5038 ||: 100%|██████████| 3/3 [00:00<00:00,  3.15it/s]
+
+2020-05-22 12:53:33,234 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+2020-05-22 12:53:33,235 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/9 [00:00<?, ?it/s]
+2020-05-22 12:53:36,758 - INFO - allennlp.training.trainer - Validating
+accuracy: 0.9814, accuracy3: 0.9823, precision-overall: 0.9278, recall-overall: 0.9281, f1-measure-overall: 0.9279, loss: 147.4798 ||: 100%|██████████| 9/9 [00:03<00:00,  2.55it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:53:37,427 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:53:37,427 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:53:37,427 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2664.780  |       N/A
+2020-05-22 12:53:37,428 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.982  |     0.966
+2020-05-22 12:53:37,430 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.928  |     0.894
+2020-05-22 12:53:37,430 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.928  |     0.898
+2020-05-22 12:53:37,430 - INFO - allennlp.training.tensorboard_writer - loss               |   147.480  |   201.364
+2020-05-22 12:53:37,430 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.928  |     0.890
+2020-05-22 12:53:37,431 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.981  |     0.963
+2020-05-22 12:53:37,441 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to 'output/best.th'.
+2020-05-22 12:53:37,453 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.382854
+2020-05-22 12:53:37,453 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:28
+2020-05-22 12:53:37,453 - INFO - allennlp.training.trainer - Epoch 23/39
+2020-05-22 12:53:37,453 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2664.78
+2020-05-22 12:53:37,614 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+accuracy: 0.9634, accuracy3: 0.9659, precision-overall: 0.8980, recall-overall: 0.8897, f1-measure-overall: 0.8938, loss: 201.3642 ||: 100%|██████████| 3/3 [00:00<00:00,  4.49it/s]
+
+2020-05-22 12:53:37,615 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/9 [00:00<?, ?it/s]
+2020-05-22 12:53:42,077 - INFO - allennlp.training.trainer - Validating
+accuracy: 0.9832, accuracy3: 0.9839, precision-overall: 0.9313, recall-overall: 0.9359, f1-measure-overall: 0.9336, loss: 138.2553 ||: 100%|██████████| 9/9 [00:04<00:00,  2.02it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:53:42,919 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:53:42,920 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:53:42,920 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2664.780  |       N/A
+2020-05-22 12:53:42,920 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.984  |     0.969
+2020-05-22 12:53:42,920 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.934  |     0.900
+2020-05-22 12:53:42,921 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.931  |     0.912
+2020-05-22 12:53:42,921 - INFO - allennlp.training.tensorboard_writer - loss               |   138.255  |   201.706
+2020-05-22 12:53:42,921 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.936  |     0.888
+2020-05-22 12:53:42,921 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.983  |     0.966
+2020-05-22 12:53:42,936 - INFO - allennlp.training.trainer - Epoch duration: 0:00:05.483196
+2020-05-22 12:53:42,936 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:23
+2020-05-22 12:53:42,936 - INFO - allennlp.training.trainer - Epoch 24/39
+2020-05-22 12:53:42,937 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2664.78
+2020-05-22 12:53:43,098 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+2020-05-22 12:53:43,099 - INFO - allennlp.training.trainer - Training
+accuracy: 0.9660, accuracy3: 0.9686, precision-overall: 0.9119, recall-overall: 0.8882, f1-measure-overall: 0.8999, loss: 201.7060 ||: 100%|██████████| 3/3 [00:00<00:00,  3.57it/s]
+
+  0%|          | 0/9 [00:00<?, ?it/s]
+2020-05-22 12:53:47,358 - INFO - allennlp.training.trainer - Validating
+accuracy: 0.9832, accuracy3: 0.9840, precision-overall: 0.9405, recall-overall: 0.9349, f1-measure-overall: 0.9377, loss: 126.5632 ||: 100%|██████████| 9/9 [00:04<00:00,  2.11it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:53:48,111 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:53:48,111 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:53:48,111 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2664.780  |       N/A
+2020-05-22 12:53:48,112 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.984  |     0.964
+2020-05-22 12:53:48,112 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.938  |     0.893
+2020-05-22 12:53:48,112 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.941  |     0.907
+2020-05-22 12:53:48,112 - INFO - allennlp.training.tensorboard_writer - loss               |   126.563  |   207.214
+2020-05-22 12:53:48,113 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.935  |     0.879
+2020-05-22 12:53:48,113 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.983  |     0.962
+2020-05-22 12:53:48,128 - INFO - allennlp.training.trainer - Epoch duration: 0:00:05.191064
+2020-05-22 12:53:48,128 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:17
+2020-05-22 12:53:48,128 - INFO - allennlp.training.trainer - Epoch 25/39
+2020-05-22 12:53:48,128 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2664.78
+accuracy: 0.9619, accuracy3: 0.9644, precision-overall: 0.9068, recall-overall: 0.8790, f1-measure-overall: 0.8927, loss: 207.2141 ||: 100%|██████████| 3/3 [00:00<00:00,  3.99it/s]
+
+2020-05-22 12:53:48,291 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+2020-05-22 12:53:48,292 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/9 [00:00<?, ?it/s]
+2020-05-22 12:53:52,788 - INFO - allennlp.training.trainer - Validating
+accuracy: 0.9856, accuracy3: 0.9864, precision-overall: 0.9490, recall-overall: 0.9473, f1-measure-overall: 0.9482, loss: 113.9854 ||: 100%|██████████| 9/9 [00:04<00:00,  2.00it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:53:53,639 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:53:53,639 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:53:53,639 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2664.780  |       N/A
+2020-05-22 12:53:53,639 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.986  |     0.968
+2020-05-22 12:53:53,640 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.948  |     0.898
+2020-05-22 12:53:53,640 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.949  |     0.905
+2020-05-22 12:53:53,640 - INFO - allennlp.training.tensorboard_writer - loss               |   113.985  |   202.570
+2020-05-22 12:53:53,640 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.947  |     0.891
+2020-05-22 12:53:53,640 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.986  |     0.965
+2020-05-22 12:53:53,655 - INFO - allennlp.training.trainer - Epoch duration: 0:00:05.527156
+2020-05-22 12:53:53,655 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:12
+2020-05-22 12:53:53,655 - INFO - allennlp.training.trainer - Epoch 26/39
+2020-05-22 12:53:53,655 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2664.78
+accuracy: 0.9647, accuracy3: 0.9676, precision-overall: 0.9051, recall-overall: 0.8913, f1-measure-overall: 0.8981, loss: 202.5700 ||: 100%|██████████| 3/3 [00:00<00:00,  3.53it/s]
+
+2020-05-22 12:53:53,811 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+2020-05-22 12:53:53,812 - INFO - allennlp.training.trainer - Training
+2020-05-22 12:53:57,543 - INFO - allennlp.training.trainer - Validating
+  0%|          | 0/9 [00:00<?, ?it/s]
+accuracy: 0.9873, accuracy3: 0.9881, precision-overall: 0.9469, recall-overall: 0.9466, f1-measure-overall: 0.9468, loss: 105.9537 ||: 100%|██████████| 9/9 [00:03<00:00,  2.41it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:53:58,216 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:53:58,216 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:53:58,216 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2664.780  |       N/A
+2020-05-22 12:53:58,216 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.988  |     0.963
+2020-05-22 12:53:58,217 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.947  |     0.892
+2020-05-22 12:53:58,217 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.947  |     0.885
+2020-05-22 12:53:58,217 - INFO - allennlp.training.tensorboard_writer - loss               |   105.954  |   211.379
+2020-05-22 12:53:58,217 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.947  |     0.899
+2020-05-22 12:53:58,217 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.987  |     0.961
+2020-05-22 12:53:58,231 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.575569
+2020-05-22 12:53:58,231 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:07
+2020-05-22 12:53:58,231 - INFO - allennlp.training.trainer - Epoch 27/39
+2020-05-22 12:53:58,231 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2664.78
+2020-05-22 12:53:58,400 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+accuracy: 0.9608, accuracy3: 0.9632, precision-overall: 0.8854, recall-overall: 0.8989, f1-measure-overall: 0.8921, loss: 211.3790 ||: 100%|██████████| 3/3 [00:00<00:00,  4.47it/s]
+
+2020-05-22 12:53:58,401 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/9 [00:00<?, ?it/s]
+2020-05-22 12:54:02,033 - INFO - allennlp.training.trainer - Validating
+accuracy: 0.9891, accuracy3: 0.9899, precision-overall: 0.9534, recall-overall: 0.9551, f1-measure-overall: 0.9543, loss: 100.0329 ||: 100%|██████████| 9/9 [00:03<00:00,  2.48it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:54:03,004 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:54:03,004 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:54:03,004 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2664.780  |       N/A
+2020-05-22 12:54:03,005 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.990  |     0.969
+2020-05-22 12:54:03,005 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.954  |     0.896
+2020-05-22 12:54:03,005 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.953  |     0.900
+2020-05-22 12:54:03,005 - INFO - allennlp.training.tensorboard_writer - loss               |   100.033  |   208.030
+2020-05-22 12:54:03,005 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.955  |     0.893
+2020-05-22 12:54:03,006 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.989  |     0.966
+2020-05-22 12:54:03,019 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.787949
+2020-05-22 12:54:03,019 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:01
+2020-05-22 12:54:03,019 - INFO - allennlp.training.trainer - Epoch 28/39
+2020-05-22 12:54:03,019 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2664.784
+accuracy: 0.9665, accuracy3: 0.9689, precision-overall: 0.8997, recall-overall: 0.8928, f1-measure-overall: 0.8962, loss: 208.0299 ||: 100%|██████████| 3/3 [00:00<00:00,  3.09it/s]
+
+2020-05-22 12:54:03,177 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+2020-05-22 12:54:03,177 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/9 [00:00<?, ?it/s]
+2020-05-22 12:54:07,218 - INFO - allennlp.training.trainer - Validating
+accuracy: 0.9892, accuracy3: 0.9899, precision-overall: 0.9524, recall-overall: 0.9544, f1-measure-overall: 0.9534, loss: 91.7509 ||: 100%|██████████| 9/9 [00:04<00:00,  2.23it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:54:07,946 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:54:07,947 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:54:07,947 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2664.784  |       N/A
+2020-05-22 12:54:07,947 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.990  |     0.969
+2020-05-22 12:54:07,947 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.953  |     0.903
+2020-05-22 12:54:07,947 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.952  |     0.911
+2020-05-22 12:54:07,948 - INFO - allennlp.training.tensorboard_writer - loss               |    91.751  |   211.013
+2020-05-22 12:54:07,948 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.954  |     0.896
+2020-05-22 12:54:07,948 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.989  |     0.967
+2020-05-22 12:54:07,961 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.942019
+2020-05-22 12:54:07,962 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:56
+2020-05-22 12:54:07,962 - INFO - allennlp.training.trainer - Epoch 29/39
+2020-05-22 12:54:07,962 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2664.784
+2020-05-22 12:54:08,119 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+accuracy: 0.9667, accuracy3: 0.9692, precision-overall: 0.9112, recall-overall: 0.8959, f1-measure-overall: 0.9035, loss: 211.0127 ||: 100%|██████████| 3/3 [00:00<00:00,  4.12it/s]
+
+2020-05-22 12:54:08,120 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/9 [00:00<?, ?it/s]
+2020-05-22 12:54:11,698 - INFO - allennlp.training.trainer - Validating
+accuracy: 0.9911, accuracy3: 0.9918, precision-overall: 0.9587, recall-overall: 0.9580, f1-measure-overall: 0.9583, loss: 81.4748 ||: 100%|██████████| 9/9 [00:03<00:00,  2.52it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:54:12,491 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:54:12,491 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:54:12,492 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2664.784  |       N/A
+2020-05-22 12:54:12,492 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.992  |     0.971
+2020-05-22 12:54:12,492 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.958  |     0.905
+2020-05-22 12:54:12,492 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.959  |     0.909
+2020-05-22 12:54:12,495 - INFO - allennlp.training.tensorboard_writer - loss               |    81.475  |   209.453
+2020-05-22 12:54:12,495 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.958  |     0.900
+2020-05-22 12:54:12,495 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.991  |     0.969
+2020-05-22 12:54:12,508 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.546541
+2020-05-22 12:54:12,508 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:51
+2020-05-22 12:54:12,508 - INFO - allennlp.training.trainer - Epoch 30/39
+2020-05-22 12:54:12,508 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2664.784
+accuracy: 0.9688, accuracy3: 0.9713, precision-overall: 0.9088, recall-overall: 0.9005, f1-measure-overall: 0.9046, loss: 209.4531 ||: 100%|██████████| 3/3 [00:00<00:00,  3.78it/s]
+
+2020-05-22 12:54:12,668 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+2020-05-22 12:54:12,668 - INFO - allennlp.training.trainer - Training
+2020-05-22 12:54:16,753 - INFO - allennlp.training.trainer - Validating
+  0%|          | 0/9 [00:00<?, ?it/s]
+accuracy: 0.9916, accuracy3: 0.9924, precision-overall: 0.9599, recall-overall: 0.9637, f1-measure-overall: 0.9618, loss: 76.0123 ||: 100%|██████████| 9/9 [00:04<00:00,  2.20it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:54:17,512 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:54:17,513 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:54:17,513 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2664.784  |       N/A
+2020-05-22 12:54:17,513 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.992  |     0.968
+2020-05-22 12:54:17,513 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.962  |     0.896
+2020-05-22 12:54:17,513 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.960  |     0.891
+2020-05-22 12:54:17,514 - INFO - allennlp.training.tensorboard_writer - loss               |    76.012  |   211.465
+2020-05-22 12:54:17,514 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.964  |     0.900
+2020-05-22 12:54:17,514 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.992  |     0.966
+2020-05-22 12:54:17,528 - INFO - allennlp.training.trainer - Epoch duration: 0:00:05.019479
+2020-05-22 12:54:17,528 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:46
+2020-05-22 12:54:17,528 - INFO - allennlp.training.trainer - Epoch 31/39
+2020-05-22 12:54:17,528 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2664.784
+accuracy: 0.9656, accuracy3: 0.9681, precision-overall: 0.8909, recall-overall: 0.9005, f1-measure-overall: 0.8957, loss: 211.4648 ||: 100%|██████████| 3/3 [00:00<00:00,  3.96it/s]
+
+2020-05-22 12:54:17,685 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+2020-05-22 12:54:17,686 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/9 [00:00<?, ?it/s]
+2020-05-22 12:54:22,527 - INFO - allennlp.training.trainer - Validating
+accuracy: 0.9919, accuracy3: 0.9927, precision-overall: 0.9626, recall-overall: 0.9626, f1-measure-overall: 0.9626, loss: 71.9798 ||: 100%|██████████| 9/9 [00:04<00:00,  1.86it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:54:23,520 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:54:23,520 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:54:23,520 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2664.784  |       N/A
+2020-05-22 12:54:23,520 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.993  |     0.971
+2020-05-22 12:54:23,521 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.963  |     0.909
+2020-05-22 12:54:23,521 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.963  |     0.912
+2020-05-22 12:54:23,521 - INFO - allennlp.training.tensorboard_writer - loss               |    71.980  |   209.130
+2020-05-22 12:54:23,521 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.963  |     0.907
+2020-05-22 12:54:23,521 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.992  |     0.968
+2020-05-22 12:54:23,535 - INFO - allennlp.training.trainer - Epoch duration: 0:00:06.006976
+2020-05-22 12:54:23,535 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:41
+2020-05-22 12:54:23,535 - INFO - allennlp.training.trainer - Epoch 32/39
+2020-05-22 12:54:23,535 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2664.784
+accuracy: 0.9683, accuracy3: 0.9708, precision-overall: 0.9122, recall-overall: 0.9066, f1-measure-overall: 0.9094, loss: 209.1298 ||: 100%|██████████| 3/3 [00:00<00:00,  3.03it/s]
+
+2020-05-22 12:54:23,694 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+2020-05-22 12:54:23,695 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/9 [00:00<?, ?it/s]
+2020-05-22 12:54:28,285 - INFO - allennlp.training.trainer - Validating
+accuracy: 0.9922, accuracy3: 0.9931, precision-overall: 0.9592, recall-overall: 0.9626, f1-measure-overall: 0.9609, loss: 74.1489 ||: 100%|██████████| 9/9 [00:04<00:00,  1.96it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:54:29,347 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:54:29,347 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:54:29,347 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2664.784  |       N/A
+2020-05-22 12:54:29,348 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.993  |     0.970
+2020-05-22 12:54:29,348 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.961  |     0.900
+2020-05-22 12:54:29,348 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.959  |     0.898
+2020-05-22 12:54:29,348 - INFO - allennlp.training.tensorboard_writer - loss               |    74.149  |   213.649
+2020-05-22 12:54:29,348 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.963  |     0.902
+2020-05-22 12:54:29,348 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.992  |     0.968
+2020-05-22 12:54:29,362 - INFO - allennlp.training.trainer - Epoch duration: 0:00:05.826653
+2020-05-22 12:54:29,362 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:36
+2020-05-22 12:54:29,362 - INFO - allennlp.training.trainer - Epoch 33/39
+2020-05-22 12:54:29,362 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2664.784
+accuracy: 0.9678, accuracy3: 0.9702, precision-overall: 0.8979, recall-overall: 0.9020, f1-measure-overall: 0.8999, loss: 213.6492 ||: 100%|██████████| 3/3 [00:01<00:00,  2.83it/s]
+
+2020-05-22 12:54:29,521 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+2020-05-22 12:54:29,522 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/9 [00:00<?, ?it/s]
+2020-05-22 12:54:33,201 - INFO - allennlp.training.trainer - Validating
+accuracy: 0.9922, accuracy3: 0.9926, precision-overall: 0.9593, recall-overall: 0.9644, f1-measure-overall: 0.9618, loss: 68.6239 ||: 100%|██████████| 9/9 [00:03<00:00,  2.45it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:54:33,847 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:54:33,847 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:54:33,847 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2664.784  |       N/A
+2020-05-22 12:54:33,847 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.993  |     0.969
+2020-05-22 12:54:33,847 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.962  |     0.900
+2020-05-22 12:54:33,848 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.959  |     0.902
+2020-05-22 12:54:33,848 - INFO - allennlp.training.tensorboard_writer - loss               |    68.624  |   221.508
+2020-05-22 12:54:33,848 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.964  |     0.899
+2020-05-22 12:54:33,848 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.992  |     0.966
+2020-05-22 12:54:33,861 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.498905
+2020-05-22 12:54:33,861 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:30
+2020-05-22 12:54:33,862 - INFO - allennlp.training.trainer - Epoch 34/39
+2020-05-22 12:54:33,862 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2664.788
+accuracy: 0.9662, accuracy3: 0.9686, precision-overall: 0.9017, recall-overall: 0.8989, f1-measure-overall: 0.9003, loss: 221.5082 ||: 100%|██████████| 3/3 [00:00<00:00,  4.65it/s]
+
+2020-05-22 12:54:34,024 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+2020-05-22 12:54:34,025 - INFO - allennlp.training.trainer - Training
+2020-05-22 12:54:37,471 - INFO - allennlp.training.trainer - Validating
+  0%|          | 0/9 [00:00<?, ?it/s]
+accuracy: 0.9905, accuracy3: 0.9913, precision-overall: 0.9545, recall-overall: 0.9569, f1-measure-overall: 0.9557, loss: 82.5014 ||: 100%|██████████| 9/9 [00:03<00:00,  2.61it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:54:38,124 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:54:38,124 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:54:38,124 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2664.788  |       N/A
+2020-05-22 12:54:38,124 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.991  |     0.970
+2020-05-22 12:54:38,125 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.956  |     0.905
+2020-05-22 12:54:38,125 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.955  |     0.902
+2020-05-22 12:54:38,125 - INFO - allennlp.training.tensorboard_writer - loss               |    82.501  |   230.853
+2020-05-22 12:54:38,125 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.957  |     0.907
+2020-05-22 12:54:38,126 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.991  |     0.967
+2020-05-22 12:54:38,139 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.277705
+2020-05-22 12:54:38,139 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:25
+2020-05-22 12:54:38,140 - INFO - allennlp.training.trainer - Epoch 35/39
+2020-05-22 12:54:38,140 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2664.788
+2020-05-22 12:54:38,298 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+2020-05-22 12:54:38,298 - INFO - allennlp.training.trainer - Training
+accuracy: 0.9673, accuracy3: 0.9698, precision-overall: 0.9024, recall-overall: 0.9066, f1-measure-overall: 0.9045, loss: 230.8532 ||: 100%|██████████| 3/3 [00:00<00:00,  4.60it/s]
+
+  0%|          | 0/9 [00:00<?, ?it/s]
+2020-05-22 12:54:41,933 - INFO - allennlp.training.trainer - Validating
+accuracy: 0.9923, accuracy3: 0.9929, precision-overall: 0.9591, recall-overall: 0.9690, f1-measure-overall: 0.9641, loss: 79.2916 ||: 100%|██████████| 9/9 [00:03<00:00,  2.48it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:54:42,729 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:54:42,729 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:54:42,730 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2664.788  |       N/A
+2020-05-22 12:54:42,730 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.993  |     0.970
+2020-05-22 12:54:42,730 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.964  |     0.898
+2020-05-22 12:54:42,730 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.959  |     0.906
+2020-05-22 12:54:42,730 - INFO - allennlp.training.tensorboard_writer - loss               |    79.292  |   225.304
+2020-05-22 12:54:42,731 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.969  |     0.890
+2020-05-22 12:54:42,731 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.992  |     0.968
+2020-05-22 12:54:42,744 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.604497
+2020-05-22 12:54:42,744 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:20
+2020-05-22 12:54:42,744 - INFO - allennlp.training.trainer - Epoch 36/39
+2020-05-22 12:54:42,744 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2664.788
+2020-05-22 12:54:42,903 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+2020-05-22 12:54:42,904 - INFO - allennlp.training.trainer - Training
+accuracy: 0.9679, accuracy3: 0.9704, precision-overall: 0.9064, recall-overall: 0.8897, f1-measure-overall: 0.8980, loss: 225.3044 ||: 100%|██████████| 3/3 [00:00<00:00,  3.77it/s]
+
+  0%|          | 0/9 [00:00<?, ?it/s]
+accuracy: 0.9919, accuracy3: 0.9924, precision-overall: 0.9633, recall-overall: 0.9616, f1-measure-overall: 0.9624, loss: 74.4555 ||: 100%|██████████| 9/9 [00:03<00:00,  2.25it/s]
+
+2020-05-22 12:54:46,902 - INFO - allennlp.training.trainer - Validating
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:54:47,561 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:54:47,561 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:54:47,562 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2664.788  |       N/A
+2020-05-22 12:54:47,562 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.992  |     0.972
+2020-05-22 12:54:47,562 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.962  |     0.906
+2020-05-22 12:54:47,562 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.963  |     0.903
+2020-05-22 12:54:47,563 - INFO - allennlp.training.tensorboard_writer - loss               |    74.456  |   217.094
+2020-05-22 12:54:47,563 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.962  |     0.910
+2020-05-22 12:54:47,563 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.992  |     0.970
+2020-05-22 12:54:47,576 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.831779
+2020-05-22 12:54:47,576 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:15
+2020-05-22 12:54:47,576 - INFO - allennlp.training.trainer - Epoch 37/39
+2020-05-22 12:54:47,576 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2664.788
+accuracy: 0.9697, accuracy3: 0.9721, precision-overall: 0.9027, recall-overall: 0.9096, f1-measure-overall: 0.9062, loss: 217.0941 ||: 100%|██████████| 3/3 [00:00<00:00,  4.55it/s]
+
+2020-05-22 12:54:47,736 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+2020-05-22 12:54:47,737 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/9 [00:00<?, ?it/s]
+2020-05-22 12:54:51,534 - INFO - allennlp.training.trainer - Validating
+accuracy: 0.9935, accuracy3: 0.9942, precision-overall: 0.9652, recall-overall: 0.9672, f1-measure-overall: 0.9662, loss: 62.4446 ||: 100%|██████████| 9/9 [00:03<00:00,  2.37it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:54:52,413 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:54:52,413 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:54:52,413 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2664.788  |       N/A
+2020-05-22 12:54:52,413 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.994  |     0.972
+2020-05-22 12:54:52,414 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.966  |     0.906
+2020-05-22 12:54:52,414 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.965  |     0.910
+2020-05-22 12:54:52,414 - INFO - allennlp.training.tensorboard_writer - loss               |    62.445  |   203.910
+2020-05-22 12:54:52,414 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.967  |     0.902
+2020-05-22 12:54:52,415 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.993  |     0.970
+2020-05-22 12:54:52,428 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.851388
+2020-05-22 12:54:52,428 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:10
+2020-05-22 12:54:52,428 - INFO - allennlp.training.trainer - Epoch 38/39
+2020-05-22 12:54:52,428 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2664.788
+2020-05-22 12:54:52,592 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+accuracy: 0.9698, accuracy3: 0.9723, precision-overall: 0.9104, recall-overall: 0.9020, f1-measure-overall: 0.9062, loss: 203.9102 ||: 100%|██████████| 3/3 [00:00<00:00,  3.42it/s]
+
+2020-05-22 12:54:52,593 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/9 [00:00<?, ?it/s]
+accuracy: 0.9938, accuracy3: 0.9943, precision-overall: 0.9681, recall-overall: 0.9708, f1-measure-overall: 0.9694, loss: 59.6353 ||: 100%|██████████| 9/9 [00:03<00:00,  2.28it/s]
+
+2020-05-22 12:54:56,533 - INFO - allennlp.training.trainer - Validating
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:54:57,248 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:54:57,248 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:54:57,249 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2664.788  |       N/A
+2020-05-22 12:54:57,249 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.994  |     0.971
+2020-05-22 12:54:57,249 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.969  |     0.899
+2020-05-22 12:54:57,249 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.968  |     0.909
+2020-05-22 12:54:57,250 - INFO - allennlp.training.tensorboard_writer - loss               |    59.635  |   233.369
+2020-05-22 12:54:57,250 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.971  |     0.890
+2020-05-22 12:54:57,250 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.994  |     0.968
+2020-05-22 12:54:57,263 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.835367
+2020-05-22 12:54:57,264 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:05
+2020-05-22 12:54:57,264 - INFO - allennlp.training.trainer - Epoch 39/39
+2020-05-22 12:54:57,264 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2664.788
+accuracy: 0.9682, accuracy3: 0.9707, precision-overall: 0.9092, recall-overall: 0.8897, f1-measure-overall: 0.8994, loss: 233.3688 ||: 100%|██████████| 3/3 [00:00<00:00,  4.20it/s]
+
+2020-05-22 12:54:57,433 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2340
+2020-05-22 12:54:57,434 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/9 [00:00<?, ?it/s]
+2020-05-22 12:55:01,493 - INFO - allennlp.training.trainer - Validating
+accuracy: 0.9918, accuracy3: 0.9923, precision-overall: 0.9621, recall-overall: 0.9662, f1-measure-overall: 0.9641, loss: 71.7893 ||: 100%|██████████| 9/9 [00:04<00:00,  2.22it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+2020-05-22 12:55:02,383 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-05-22 12:55:02,383 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  2340.000  |       N/A
+2020-05-22 12:55:02,383 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB      |  2664.788  |       N/A
+2020-05-22 12:55:02,384 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.992  |     0.966
+2020-05-22 12:55:02,384 - INFO - allennlp.training.tensorboard_writer - f1-measure-overall |     0.964  |     0.897
+2020-05-22 12:55:02,384 - INFO - allennlp.training.tensorboard_writer - precision-overall  |     0.962  |     0.910
+2020-05-22 12:55:02,384 - INFO - allennlp.training.tensorboard_writer - loss               |    71.789  |   260.661
+2020-05-22 12:55:02,384 - INFO - allennlp.training.tensorboard_writer - recall-overall     |     0.966  |     0.884
+2020-05-22 12:55:02,385 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.992  |     0.964
+2020-05-22 12:55:02,398 - INFO - allennlp.training.trainer - Epoch duration: 0:00:05.134117
+2020-05-22 12:55:02,398 - INFO - allennlp.training.checkpointer - loading best weights
+2020-05-22 12:55:02,404 - INFO - __main__ - model training complete, save model starting
+2020-05-22 12:55:02,404 - INFO - __main__ - writing the vocabulary to output/vocabulary.
+2020-05-22 12:55:02,414 - INFO - __main__ - done creating vocab
+2020-05-22 12:55:02,414 - INFO - allennlp.models.archival - archiving weights and vocabulary to output/model.tar.gz
+accuracy: 0.9637, accuracy3: 0.9662, precision-overall: 0.9101, recall-overall: 0.8836, f1-measure-overall: 0.8967, loss: 260.6608 ||: 100%|██████████| 3/3 [00:00<00:00,  3.37it/s]
