@@ -2,29 +2,28 @@
 
 NeuralSnowball AAAI2020
 
-![image](https://github.com/RogerJTX/Notes_And_Paper_Sharing/blob/master/image_knowledge_graph/financial_knowledge_graph_NeuralSnowball_RSN.PNG)
+![](README_images/4801b7fa.png)
 
 Simple-Lexicon
 
-![image](https://github.com/RogerJTX/Notes_And_Paper_Sharing/blob/master/image_knowledge_graph/financial_knowledge_graph_04_Simple-Lexicon模型.jpg)
+![](README_images/e8aba960.png)
 
 Flow Chart
 
-![image](https://github.com/RogerJTX/Notes_And_Paper_Sharing/blob/master/image_knowledge_graph/financial_knowledge_graph_01.PNG)
+![](README_images/380c484d.png)
 
-![image](https://github.com/RogerJTX/Notes_And_Paper_Sharing/blob/master/image_knowledge_graph/financial_knowledge_graph_02.PNG)
+![](README_images/89f6f5f6.png)
 
-![image](https://github.com/RogerJTX/Notes_And_Paper_Sharing/blob/master/image_knowledge_graph/financial_knowledge_graph_03.PNG)
+![](README_images/304db08b.png)
 
 
 # Triple extraction --use albert
 
-![image](https://github.com/RogerJTX/Notes_And_Paper_Sharing/blob/master/image_knowledge_graph/triples_extraction_in_specific_domains_01.png)
+![](README_images/8b51e414.png)
 
-![image](https://github.com/RogerJTX/Notes_And_Paper_Sharing/blob/master/image_knowledge_graph/triples_extraction_in_specific_domains_02.png)
+![](README_images/9ae04003.png)
 
-![image](https://github.com/RogerJTX/Notes_And_Paper_Sharing/blob/master/image_knowledge_graph/triples_extraction_in_specific_domains_03.png)
-
+![](README_images/5872da55.png)
 
 
 # Financing_Entity_Extraction
